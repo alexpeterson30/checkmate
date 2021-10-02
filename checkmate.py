@@ -19,3 +19,19 @@ def telegram_bot_sendtext(bot_message):
    send_text = endpt + bot_token + action + bot_chatID + mode + bot_message
    response = requests.get(send_text)
    return response.json()
+def hello():
+    global site
+    site = mytext.get()
+    print(site)
+    with suppress(Exception):  ## https://hg.python.org/cpython/rev/406b47c64480 
+        while (1):
+            try:
+                x = (urllib.request.urlopen(site).getcode())  
+                ## Will return 200 if status = OK
+                if x == 200:
+                        print("Connected successfully. Sent message to telegram")
+                        s = f"Connected Successfully to {site}"
+                        telegram_bot_sendtext(s)
+                        show_text = Label(root, text = s)
+                        show_text.pack()
+                        break
