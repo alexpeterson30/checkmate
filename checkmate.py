@@ -44,3 +44,8 @@ def hello():
                 show_e.pack()
                 time.sleep(1)
                 continue
+root = Tk()
+root.title('Windows Test app')
+root.geometry("300x200")
+mylabel = Label(root, text = "Enter the website: ")
+mylabel.pack()
