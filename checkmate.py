@@ -35,3 +35,12 @@ def hello():
                         show_text = Label(root, text = s)
                         show_text.pack()
                         break
+    else:
+                    print("Something is wrong")
+            except:
+                e="Trying again"
+                print(e)
+                show_e = Label(root, text = e)
+                show_e.pack()
+                time.sleep(1)
+                continue
