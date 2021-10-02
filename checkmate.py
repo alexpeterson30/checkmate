@@ -49,3 +49,12 @@ root.title('Windows Test app')
 root.geometry("300x200")
 mylabel = Label(root, text = "Enter the website: ")
 mylabel.pack()
+
+mytext = Entry(root, width = 30)
+mytext.pack()
+
+mybutton = Button(root, text = "Submit", command=hello) #This is a function
+mybutton.pack()
+
+root.mainloop()
+                
